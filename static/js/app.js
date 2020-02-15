@@ -44,9 +44,9 @@ button.on("click", function() {
   console.log(inputValue);
 //   console.log(people);
   if (inputValue === ""){
-    // break;
-  // filteredData = filteredData.filter(date => date.datetime === inputValue);
-} else {
+    // this makes sure that we provide the appopiate value to the input 
+    // and check if the value is empty
+  } else {
   filteredData = filteredData.filter(date => date.datetime === inputValue);
 }
 
@@ -56,8 +56,8 @@ button.on("click", function() {
 
   // Then, select the unordered list element by class name
   var list = d3.select("tbody");
-//   var list = d3.select("#ufo-table");
-  // remove any children from the list to
+  // empty any previous information in the html tag also to make sure we don't append in top of the array
+  
   list.html("");
 
   // append stats to the list

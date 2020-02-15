@@ -53,9 +53,10 @@ allShape.forEach(element => {
 var button = d3.select("#filter-btn");
 var filteredData = tableData;
 
+var object = {}
 function builtFilter(){
     var date, city, state, country, shape;
-    d3.selectAll("#selState").on("change", state = d3.select("#selState").property('value'));
+    d3.selectAll("#selState").on("change",  = d3.select("#selState").property('value'));
 
 
     // return date, city, state, country, shape;
