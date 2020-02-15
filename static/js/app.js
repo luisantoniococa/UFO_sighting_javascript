@@ -7,7 +7,6 @@ var people = data;
 var list = d3.select("tbody");
 list.html("");
 people.forEach(element => {
-    // console.log(element.city)
    
    var trow = list.append("tr");
 
@@ -40,7 +39,7 @@ button.on("click", function() {
   var inputValue = inputElement.property("value");
 
   console.log(inputValue);
-//   console.log(people);
+
   if (inputValue === ""){
     // this makes sure that we provide the appopiate value to the input 
     // and check if the value is empty
