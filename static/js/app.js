@@ -1,11 +1,16 @@
-// from data.js
+// from data.js we save the data in the variable
 var tableData = data;
 
 
-// Assign the data from `data.js` to a descriptive variable
+// Assign the data from `data.js' and create a list that is going to help use select the 
+// html tag
 var people = data;
 var list = d3.select("tbody");
+// make sure that the table is empty before appending the table data
 list.html("");
+
+// we are going to append a table to the selection variable and add rows
+// for every value in the dataset
 people.forEach(element => {
    
    var trow = list.append("tr");
@@ -26,7 +31,7 @@ people.forEach(element => {
 // Select the button
 var button = d3.select("#filter-btn");
 
-
+// creathe the event handeler on button clicked in the html file
 button.on("click", function() {
   var filteredData = people;
 
@@ -46,7 +51,8 @@ button.on("click", function() {
   } else {
   filteredData = filteredData.filter(date => date.datetime === inputValue);
 }
-
+  // this is a console log to make sure we have all the information 
+  // loaded properly
   console.log(`this is the filtered data ${filteredData}`);
 
 
@@ -57,7 +63,7 @@ button.on("click", function() {
   
   list.html("");
 
-  // append stats to the list
+  // append the new values to the table based in the filtered data
  filteredData.forEach(element => {
   
   var trow = list.append("tr");
