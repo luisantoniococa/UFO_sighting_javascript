@@ -1,8 +1,6 @@
 // from data.js
 var tableData = data;
 
-// YOUR CODE HERE!
-
 
 // Assign the data from `data.js` to a descriptive variable
 var people = data;
