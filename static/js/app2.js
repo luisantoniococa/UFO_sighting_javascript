@@ -36,6 +36,8 @@ allState.forEach(element => {
   var dropSelect = d3.select("#selState");
   var x = dropSelect.append('option').text(element);
   x.value = element;
+
+  
 });
 let allCity = Array.from(new Set(tableData.map(element => element.city)));
 allCity.forEach(element => {
